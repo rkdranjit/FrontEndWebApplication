@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>InrangeOutrange</title>
+        <style>
+            #age:in-range+span{
+                display: none;
+            }
+            #age:out-of-range+span{
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Age</legend>
+            <form>
+                <div>
+                    <input type="number" id="age" min="18" max="50">
+                    <span>Age 18 to 50 only</span>
+                </div>
+                <br><br>
+                <button>Submit</button>
+            </form>
+        </fieldset>
+    </body>
+</html>

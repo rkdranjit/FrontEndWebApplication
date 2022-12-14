@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ElementStateEnableDisable</title>
+        <style>
+            button:disabled{
+                background-color: gray;
+                color: white;
+                cursor: not-allowed;
+            }
+            button:enabled{
+                background-color: green;
+                color: white;
+                cursor: grab;
+            }
+            input[type="text"]:disabled{
+                background-color: gray;
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+        Name:
+        <input type="text" disabled>
+        
+        <button >Submit</button>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOMgetelementById</title>
+        <script>
+            function bodyload()
+            {
+                document.getElementById("pic").src="../assets/shoe.jpg";
+                document.getElementById("btnSubmit").value="Submit";
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <div>
+            <img name="pic" id="pic" width="100" height="100" border="1">
+        </div>
+        <div>
+            <form name="frmRegister" id="frmRegister">
+                <h3>Register</h3>
+                <div>
+                    User Name:
+                    <input type="text" name="txtName" id="txtName">
+                    <input type="button" name="btnSubmit" id="btnSubmit">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

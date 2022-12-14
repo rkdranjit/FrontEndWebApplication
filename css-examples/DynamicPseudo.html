@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DynamicPseudoClass</title>
+        <style>
+            a:link{
+                color: green;
+                text-decoration: none;
+            }
+            a:visited{
+                color: gray;
+            }
+            a:active{
+                color: red;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            img:hover{
+                width: 200px;
+                height: 200px;
+                transition: 2s;
+            }
+            img{
+                transition: 2s;
+            }
+            input:focus{
+                border: 2px solid;
+            }
+            #txtName+span{
+                display: none;
+            }
+            #txtName:focus+span{
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            UserName:
+            <input type="text" id="txtName">
+            <span>Name In Block Letters</span>
+        </div><br>
+        <img src="../assets/shoes.jpg" width="100" height="100"><br>
+        <a href="http://www.amazon.in">Amazon</a>
+        <a href="contact.html">Contact</a>
+    </body>
+</html>

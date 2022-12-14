@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BeforeAfter</title>
+        <style>
+            ul{
+                display: flex;
+                list-style: none;
+            }
+            li::after{
+                content: "/";
+            }
+            li:last-child::after{
+                content: "";
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </body>
+</html>

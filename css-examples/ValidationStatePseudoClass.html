@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ValidationStateRequiredOptional</title>
+        <style>
+            #UserName:required{
+                    border: 1px solid red;
+            }
+            #UserName:optional{
+                border: 1px solid orange;
+            }
+            #UserName:required+span{
+                display: inline;
+            }
+            #UserName:optional+span{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>User Name</legend>
+            <form>
+                <div>
+                    <input type="text" name="UserName" required id="UserName">
+                    <span>User Name Required</span>
+                </div>
+                <br><br>
+                <button>Submit</button>
+            </form>
+        </fieldset>
+    </body>
+</html>

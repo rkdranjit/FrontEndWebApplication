@@ -1,0 +1,27 @@
+{
+  "name": "fullstackproject",
+  "version": "1.0.0",
+  "description": "Full stack web Development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "author": "Nresh",
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rkdranjit/fullstackpratice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rkdranjit/fullstackpratice/issues"
+  },
+  "homepage": "https://github.com/rkdranjit/fullstackpratice#readme"
+}

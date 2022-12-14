@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout</title>
+        <style>
+            header div 
+            {
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+            }
+            header{
+                background-color: tomato;
+                color: white;
+                padding: 5px;
+            }
+            menu span{
+                margin-right: 20px;
+                font-size: 15px;
+            }
+            footer{
+                background-color: tomato;
+                color: white;
+                font-size: 20px;
+                padding: 10px;
+                text-align: center;
+            }
+            section{
+                height: 400px;
+                display: grid;
+                grid-template-columns: 2fr 8fr 2fr;
+                margin-top: 40px;
+            }
+            menu div{
+                width: 130px;
+                background-color: blue;
+                color: black;
+                margin-bottom: 20px;
+                font-size: 40px;
+                padding: 3px;
+            }
+            aside{
+                border: 2px solid;
+                height: 80px;
+                text-align: center;
+                padding: 10px;
+            }
+            article{
+                border:2px dotted;
+                height: 40px;
+                width: 200px;
+            }
+            figure{
+                border: 2px double;
+                height: 130px;
+                width: 130px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+           <div> Amazon Shopping </div>
+            <nav>
+                <menu>
+                    <span>Home</span>
+                    <span>|</span>
+                    <span>About</span>
+                    <span>|</span>
+                    <span>Contact</span>
+                </menu>
+            </nav>
+        </header>
+        <section>
+            <nav>
+               <menu>
+                <div>Home</div>
+                <div>About</div>
+                <div>Contact</div>
+               </menu>
+            </nav>
+            <main>
+               <article>Updates..</article>
+               <figure>
+                Image
+               
+               <figcaption>Fig-1</figcaption>
+               </figure>
+               <dialog open>Chat With HR</dialog>
+            </main>
+            <aside>
+                ads here..
+            </aside>
+        </section>
+        <footer>
+            &copy;copyright 2021
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DesignOfCheckbox</title>
+        <style>
+            #terms{
+               
+                width: 300px;
+                height: 150px;
+                overflow: auto;
+                background-color: lightgray;
+               
+            }
+           fieldset{
+            width: 300px;
+           }
+           #accept+span{
+                     color: red;
+           }
+           #accept:checked+span{
+            color: green;
+           }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Terms & Conditions</legend>
+            <div id="terms">
+                Your use of this software is subject to the terms and conditions of the license agreement by which you acquired this software.  If you are a volume license customer, use of this software is subject to your volume license agreement.  You may not use this software if you have not validly acquired a license for the software from Microsoft or its licensed distributors.  
+            </div>
+        </fieldset>
+        <div>
+            <input type="checkbox" id="accept"><span>I Accept</span>
+        </div>
+    </body>
+</html>
