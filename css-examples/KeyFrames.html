@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Key Frames</title>
+        <style>
+            .container
+            {
+                overflow: hidden;
+                height: 400px;
+            }
+            @keyframes slideIn
+            {
+                from
+                {
+                    margin-left: 100%;
+                    transform: rotate(360deg);
+                }
+                to
+                {
+                    margin-left: 0%;
+                    transform: rotate(0deg);
+                }
+            }
+            img{
+                animation-name: slideIn;
+                animation-duration: 5s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="../assets/speaker.jpg" width="100" height="100 ">
+        </div>
+    </body>
+</html>

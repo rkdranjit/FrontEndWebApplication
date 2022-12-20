@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS TRANSITION</title>
+        <style>
+            .box-1
+            {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                transition-duration: 5s;
+                transition-delay: 2s;
+            }
+            .box-1:hover
+            {
+                width: 500px;
+                background-color: yellow;
+                transition-duration: 2s;
+                transition-delay: 3s;
+                transition-property: width;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box-1"></div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+html,body
+{
+height: 100%;
+width: 100%;
+}
+.nav
+{
+    padding-top: 14px;
+}
+nav ul li
+{
+    list-style: none;
+}
+.select
+{
+    border-radius: 10px;
+    width:130px;
+    height: 25px;
+    top: 25px;
+}
+.option
+{
+    font-size: 20px;
+    font-style: italic;
+}
