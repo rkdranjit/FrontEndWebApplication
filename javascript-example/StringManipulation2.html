@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>startWith()</title>
+    
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function verifyCard()
+        {
+            var cardNumber=document.getElementById("txtCard").value;
+            var pic=document.getElementById("pic");
+            if(cardNumber.startsWith("44"))
+            {
+                pic.src="../assets/visa.png"
+            }else{
+                pic.src="../assets/master.png"
+            }
+        }
+          </script>
+</head>
+<body class="container-field m-3 w-50">
+    <fieldset class="mt-3">
+        <legend>Payment Details</legend>
+        <div class="input-group">
+              <span class="input-group-text">Card Number</span>
+                <input type="text" id="txtCard" onkeyup="verifyCard()" class="form-control">
+                 <span class="input-group-text">
+                    <img id="pic" width="50" height="30">
+                 </span>
+                </input>
+                 
+        </div>
+    </fieldset>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

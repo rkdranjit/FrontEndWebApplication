@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Format using Styles</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+       <script>
+         function verifyName()
+        {
+          var userName=document.getElementById("txtName").value;
+          var msg=document.getElementById("msg");
+          if(userName.length<4)
+          {
+            msg.innerHTML="Name Too Short..";
+            msg.style.color="red";
+          } else if(userName.length>10)
+          {
+            msg.innerHTML="Name Is Too Long..";
+            msg.style.color="gold";
+          } else{
+            msg.innerHTML="";
+          }
+        }
+       </script>
+    </head>
+    <body class="container-fluid">
+        <form>
+            <fieldset>
+                <legend>User Name</legend>
+                    <input type="text" id="txtName" onkeyup="verifyName()">
+                        <div id="msg"></div>
+                    </input>
+                
+            </fieldset>
+        </form>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>

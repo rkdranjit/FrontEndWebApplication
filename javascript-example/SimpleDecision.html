@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LogIn</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            var userDeatails={
+                UserName:'Ranjit1',
+                Password:'R@123'
+            };
+            function LoginClick()
+            {
+                var UserName=document.getElementById("UserName").value;
+                var Password=document.getElementById("Password").value;
+                if(UserName==userDeatails.UserName && Password==userDeatails.Password)
+                {
+                    document.write("LogIn Success...");
+                }else{
+                    document.getElementById("msg").innerHTML="Invlid UserName/Password"
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <fieldset>
+            <legend>User LogIn</legend>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" id="UserName"></dd>
+                <dt>Password</dt>
+                <dd><input type="password" id="Password"></dd>
+            </dl>
+            <button onclick="LoginClick()">LogIn</button>
+        </fieldset>
+        <h2 align="center" id="msg"></h2>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LogIn</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            var userDetails={
+                UserName:'Ranjit1',
+                Password:'R@123'
+            };
+            function loginClick()
+            {
+                var UserName=document.getElementById("UserName").value;
+                var Password=document.getElementById("Password").value;
+                var msg=document.getElementById("msg");
+
+                    if(UserName==userDetails.UserName)
+                    {
+                        if(Password==userDetails.Password)
+                        {
+                            document.write("LogIn Success...");
+                        }else
+                        {
+                            msg.innerHtml="Invalid Password";
+                        }
+                    }else{
+                    msg.innerHtml="Invalid UserName..";
+                    }
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <fieldset>
+            <legend>User LogIn</legend>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" id="UserName"></dd>
+                <dt>Password</dt>
+                <dd><input type="password" id="Password"></dd>
+            </dl>
+            <button onclick="loginClick()">LogIn</button>
+        </fieldset>
+        <h2 align="center" id="msg"></h2>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Break</title>
+        <script>
+            var users=[
+                {UserName:"john"},
+                {UserName:"john12"},
+                {UserName:"Ranjitd"},
+                {UserName:"Dusmantdas"}
+            ];
+            function VerifyUser()
+            {
+                var username=document.getElementById("txtName").value;
+                var msg=document.getElementById("msg");
+                var btnRegister=document.getElementById("btnRegister");
+
+              if(username=="")
+              {
+                msg.innerHTML="User Name Required..";
+                msg.style.color="red";
+                btnRegister.disabled=true;
+              }else{
+                if(username.length<=3)
+                {
+                    msg.innerHTML="Name too sort-Atleast 4 character";
+                    msg.style.color="red";
+                    btnRegister.disabled=true;
+                }else{
+                        for(var user of users)
+                         {
+                            if(user.UserName==username)
+                            {
+                                msg.innerHTML="UserName Taken-Try Another";
+                                msg.style.color="red";
+                                btnRegister.disabled=true;
+                                break;
+                            }else{
+                                msg.innerHTML="UserName Available";
+                                msg.style.color="green";
+                                btnRegister.disabled=false;
+                            }
+                        }
+                   }
+              }
+             
+            }
+            function RegisterClick()
+              {
+                document.write("<h2>Register Successfully..</h2>");
+              }
+        </script>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Register User</legend>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" id="txtName" onkeyup="VerifyUser()"></dd>
+                <dd id="msg">
+
+                </dd>
+            </dl>
+            <button disabled id="btnRegister" onclick="RegisterClick()">Register</button>
+        </fieldset>
+    </body>
+</html>

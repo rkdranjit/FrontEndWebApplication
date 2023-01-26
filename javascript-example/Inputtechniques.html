@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prompt</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            function DeleteKey(){
+                product=prompt("Enter Product Name");
+               if(product== "")
+               {
+                document.write("please enter product name");
+               }else if(product==null)
+               {
+                document.write("You Canceled..");
+               }
+               else{
+                document.getElementById("msg").innerHTML=product+"Deleted";
+               }
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <div class="mt-3">
+            <button onclick="DeleteKey()" class="btn btn-danger">
+                Delete
+            </button>
+    </div>
+    <div class="mt-3 text-center">
+        <p id="msg"></p>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>

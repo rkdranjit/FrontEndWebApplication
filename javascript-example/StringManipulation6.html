@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Match()</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            function verifyName()
+            {
+                var regExp=/[A-Z]{4,10}/;
+                var txtName=document.getElementById("txtName").value;
+                var lblName=document.getElementById("lblName");
+                var nameError=document.getElementById("nameError");
+
+                if(txtName.match(regExp))
+                {
+                    lblName.className="input-group-text bi bi-check-circle-fill text-success";
+                    nameError.innerHTML="";
+                }else{
+                    lblName.className="input-group-text bi bi-x-circle-fill text-danger";
+                    nameError.innerHTML="Name 4 to 10 chars-Block Letter Only";
+                }
+            }
+
+            function verifyPassword()
+            {
+                var regExp=/(?=*[A-Z])\w{4,10}/;
+                var txtPwd=document.getElementById("txtPwd").value;
+                var lblPassword=document.getElementById("lblPassword");
+                var passwordError=Document.getElementById("passwordError");
+
+                if(txtPwd.match("regExp"))
+                {
+                    lblPassword.className="input-group-text bi bi-check-circle-fill text-success";
+                    passwordError.innerHTML="";
+                }else{
+                    lblPassword.className="input-group-text bi bi-x-circle-fill text-danger";
+                    passwordError.innerHTML="password 4 to 15 character with atleast 1 uppercase letter";
+                }
+            }
+
+            function verifyMobile()
+            {
+                var regExp=/\+91[0-9]{10}/;
+                var txtMobile=document.getElementById("txtMobile").value;
+                var lblMobile=document.getElementById("lblMobile");
+                var numberError=document.getElementById("numberError");
+
+                if(txtMobile.match("regExp"))
+                {
+                    lblMobile.className="input-group-text bi bi-check-circle-fill text-success";
+                    numberError.innerHTML="";
+                }else{
+                    lblMobile.className="input-group-text bi bi-x-circle-fill text-danger";
+                    numberError.innerHTML="Invalid Mobile Number:+91 with 10 digits";
+                }
+            }
+        </script>
+    </head>
+    <body class="container-field m-3">
+        <fieldset class="w-50">
+            <legend>Register User</legend>
+            <dl>
+                 <dt>User Name</dt>
+                    <dd class="input-group">
+                        <span class="input-group-text bi bi-person-fill"></span>
+                        <input type="text" class="form-control" id="txtName" onkeyup=" verifyName()">
+                        <span class="input-group-text" id="lblName"></span>
+                    </dd>
+                 <dd id="nameError" class="text-danger"></dd>
+                    
+                 <dt>Password</dt>
+                 <dd class="input-group">
+                    <span class="input-group-text bi bi-key-fill"></span>
+                    <input type="password" class="form-control" id="txtPwd" onkeyup="verifyPassword()">
+                    <span class="input-group-text" id="lblPassword"></span>
+                 </dd>
+                 <dd id="passwordError"></dd>
+                 
+                 <dt>Mobile</dt>
+                 <dd class="input-group">
+                    <span class="input-group-text bi bi-phone-fill"></span>
+                    <input type="text" class="form-control" id="txtMobile" onkeyup="verifyMobile()">
+                    <span class="input-group-text" id="lblMobile"></span>
+                 </dd>
+                 <dd id="numberError" class="text-danger"></dd>
+            </dl>
+        </fieldset>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>

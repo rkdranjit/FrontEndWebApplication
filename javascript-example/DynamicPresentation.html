@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamically Creating Image Present Through Javascript</title>
+        <script>
+            var images=["../assets/speaker.jpg","../assets/earbuds.jpg","../assets/shoe.jpg"];
+            function bodyLoad()
+            {
+                var container=document.getElementById("container");
+                for(var path of images){
+                    
+                    var pic=document.createElement("img");
+                    pic.src=path;
+                    pic.height="100";
+                    pic.width="100";
+                    container.appendChild(pic);
+                }
+            }
+        </script>
+    </head>
+    <body onload="bodyLoad()">
+        <div id="container">
+
+        </div> 
+
+    </body>
+</html>

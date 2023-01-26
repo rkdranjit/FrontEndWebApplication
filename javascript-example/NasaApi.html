@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mars Rover Photo</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            
+            function FetchData()
+            {
+                fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY")
+                    .then(function(response){
+                        return response.json();
+                    })
+                    .then(function(data){
+                        var tbody=document.getElementById("tbody");
+                        for(var item of data.photos)
+                        {
+                            var tr=document.createElement("tr");
+                            var tdId=document.createElement("td");
+                            var tdSol=document.createElement("td");
+                            var tdCamera=document.createElement("td");
+                            var tdPhoto=document.createElement("td");
+                            var tdRover=document.createElement("td");
+
+                            tdId.innerHTML=item.id;
+                            tdSol.innerHTML=item.sol;
+                            tdCamera.innerHTML=item.camera.full_name;
+                            tdRover.innerHTML=item.rover.name;
+
+                            var pic=document.createElement("img");
+                            pic.width="200";
+                            pic.height="200";
+                            pic.src=item.img_src;
+
+                            tdPhoto.appendChild(pic);
+
+                            tr.appendChild(tdId);
+                            tr.appendChild(tdSol);
+                            tr.appendChild(tdCamera);
+                            tr.appendChild(tdPhoto);
+                            tr.appendChild(tdRover);
+                            tbody.appendChild(tr);
+                        }
+                    });
+                        
+                    
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <h3>
+            NASA-Mars Rover Photo
+            <br>
+            <button onclick="FetchData()" class="btn btn-primary">Fetch API Data</button>
+        </h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Photo Id</th>
+                    <th>Sol-Days In Mars</th>
+                    <th>Camera Name</th>
+                    <th>Photo</th>
+                    <th>Rover Name</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </body>
+</html>

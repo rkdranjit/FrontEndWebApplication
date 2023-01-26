@@ -1,0 +1,12 @@
+<script>
+    function f1()
+    {
+        var cities=["Delhi","Hyd"];
+        cities.unshift("BBSR","BLR");
+        for(var property in cities)
+        {
+            document.write(`[${property}]-${cities[property]}<br>`);
+        }
+    }
+    f1();
+</script>

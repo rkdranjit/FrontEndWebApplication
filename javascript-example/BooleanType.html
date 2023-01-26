@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Boolean</title>
+        <script>
+            function genderChange()
+            {
+                var optMale=document.getElementById("optMale");
+                var optFemale=document.getElementById("optFemale");
+                var msg=document.getElementById("msg");
+                if(optMale.checked)
+                {
+                    msg.innerHTML=`Gender:${optMale.value}`;
+                }if(optFemale.checked)
+                {
+                    msg.innerHTML=`Gender:${optFemale.value}`;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Choose Gender</legend>
+            <div>
+                <input type="radio" onchange="genderChange()" id="optMale" name="Gender" value="male">Male
+                
+                <input type="radio" onchange="genderChange()" id="optFemale" name="Gender" value="female">Female
+            </div>
+            <h2 id="msg"></h2>
+        </fieldset>
+    </body>
+</html>

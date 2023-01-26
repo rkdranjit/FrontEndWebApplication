@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trim()</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            function submitClick()
+            {
+                var Password=document.getElementById("txtPwd").value;
+                var msg=document.getElementById("msg");
+                if(Password.trim()=="admin"){
+                    msg.innerHTML="verify..";
+                }else{
+                    msg.innerHTML="Invalid Password";
+                }
+            }
+        </script>
+    </head>
+    <body class="container-field m-3">
+        <h2>LogIn</h2>
+        <div>
+             <label>Password</label>
+                <div>
+                    <input type="text" id="txtPwd">
+                    <button onclick="submitClick()">Submit</button>
+                 <div id="msg"></div>
+                </div>
+        </div>
+    </body>
+</html>

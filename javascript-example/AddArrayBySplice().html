@@ -1,0 +1,12 @@
+<script>
+    function f1()
+    {
+        var cities=["BBSR","BLR","HYD"];
+        cities.splice(1,0,"GOA","MUMBAI");
+        for(var property in cities)
+        {
+            document.write(`[${property}]-${cities[property]}<br>`);
+        }
+    }
+    f1();
+</script>

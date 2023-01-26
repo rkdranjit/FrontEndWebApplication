@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamically Add & Remove Array</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            var Cities=["Delhi","Mumbai","Hyd","Chennai"];
+
+            function LoadCities(){
+                var lstCities=document.getElementById("lstCities");
+                lstCities.innerHTML="";
+                for(var item of Cities)
+                {
+                    var opt=document.createElement("option");
+                    opt.text=item;
+                    opt.value=item;
+                    lstCities.appendChild(opt);
+                }
+            }
+            function bodyload()
+            {
+                LoadCities();
+            }
+            function AddClick()
+            {
+                var txtCity=document.getElementById("txtCity");
+                Cities.push(txtCity.value);
+                LoadCities();
+                alert(`${txtCity.value}Added to list`);
+                
+                txtCity.value="";
+                txtCity.focus();
+            }
+            function RemoveClick()
+            {
+                var slectedCity=document.getElementById("lstCities").value;
+                var cityIndex=Cities.indexOf(selectedCity);
+                var status=confirm(`Are You Sure,Want To Delete${selectedCity}?`);
+                if(status==true)
+                {
+                    Cities.splice(cityIndex,1);
+                    loadCities();
+                    alert(`${selectedCity}Removed Successfully..`);
+                }
+            }
+            function SortClick()
+            {
+                Cities.sort();
+                LoadCities();
+            }
+        </script>
+    </head>
+    <body onload="bodyload()" class="container-fluid">
+        <div class="mt-4 w-25">
+            <fieldset>
+                <legend>Manage Cities</legend>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="txtName">
+                    <button class="btn btn-primary" onclick="AddClick()">Add City</button>
+                </div>
+                <div class="mt-3">
+                    <button onclick="SortClick()" class="btn btn-primary mb-2">
+                    <span class="bi bi-arrow-down"></span></button>
+                    <select class="form-select" id="lstCities" size="3">
+
+                    </select>
+                </div>
+                <div class="mt-3 d-grid">
+                    <button class="btn btn-danger" onclick="RemoveClick()">
+                    <span class="bi bi-trash">Remove City</span>
+                </button>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</html>

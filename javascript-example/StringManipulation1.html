@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>charAT() And charCodeAt()</title>
+        <script>
+            function verifyName()
+            {
+                var userName=document.getElementById("txtName").value;
+                var msg=document.getElementById("msg");
+                var firstCharCode=userName.charCodeAt(0);
+                if(firstCharCode>=65 && firstCharCode<=90)
+                {
+                    msg.innerHTML="";
+                }else{
+                    msg.innerHTML="Name must start with uppercase";
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <form>
+            <fieldset>
+                <legend>User Name</legend>
+                <input type="text" id="txtName" onkeyup="verifyName()">
+                    <div id="msg"></div>
+                </input>
+            </fieldset>
+        </form>
+    </body>
+</html>

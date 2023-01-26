@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>indexOf()</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            function verifyEmail()
+            {
+                var email=document.getElementById("txtEmail").value;
+                var error=document.getElementById("error");
+                var msg=document.getElementById("msg");
+                if(email.indexOf("@")<2)
+                {
+                    msg.innerHTML="Invalid Email-Please Include @";
+                    msg.className="text-danger";
+                }else
+                {
+                    msg.innerHTML="";
+                    if(email.endsWith("gmail.com"))
+                    {
+                        error.className="bi bi-check-circle-fill text-success";
+                    }else{
+                        error.className="bi bi-x-circle-fill text-danger";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid w-50">
+        <fieldset>
+            <legend>Your Gmail Account</legend>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <span class="bi bi-envelop-fill"></span>
+                </span>
+                <input type="text" onkeyup="verifyEmail()" class="form-control" id="txtEmail">
+                <span class="input-group-text">
+                    <span id="error"></span>
+                </span>
+            </div>
+            <div id="msg"></div>
+        </fieldset>
+    </body>
+</html>

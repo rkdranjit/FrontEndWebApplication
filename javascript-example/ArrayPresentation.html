@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Present Array Element In HTML Dynamically</title>
+        <script>
+            var Categories=["All","Electronics","Footwear","Fashion"];
+            function bodyLoad()
+            {
+                var listCategories=document.getElementById("listCategories");
+                var lstCategories=document.getElementById("lstCategories");
+                var tbody=document.getElementById("tbody");
+
+                for(var item of Categories)
+                {
+                    var li=document.createElement("li");
+                    li.innerHTML=item;
+                    listCategories.appendChild(li);
+
+                    var option=document.createElement("option");
+                    option.text=item;
+                    option.value=item;
+                    lstCategories.appendChild(option);
+
+                    var tr=document.createElement("tr");
+                    var td=document.createElement("td");
+                    td.innerHTML=item;
+                    tr.appendChild(td);
+                    tbody.appendChild(tr);
+                }
+            }
+        </script>
+
+    </head>
+    <body onload="bodyLoad()">
+        <h2>Categories List</h2>
+        <ol id="listCategories">
+
+        </ol>
+
+        <h2>Select Category</h2>
+        <select id="lstCategories">
+
+        </select>
+
+        <h2>Categories Table</h2>
+        <table border="1" width="300">
+            <thead>
+                <tr>
+                    <th>Categories List</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </body>
+</html>

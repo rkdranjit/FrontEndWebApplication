@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Convert To UpperCase</title>
+            <script>
+                function verifyName()
+                {
+                    var userName=document.getElementById("txtName").value;
+                    document.getElementById("txtName").value=userName.toUpperCase();
+                }
+            </script>
+        
+    </head>
+    <body class="container-fluid ">
+        <form>
+            <fieldset>
+                <legend>User Name</legend>
+                <input type="text" id="txtName" placeholder="BlockLetterOnly..." onblur="verifyName()">
+
+            </fieldset>
+        </form>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>

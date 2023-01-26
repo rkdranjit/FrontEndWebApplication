@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fakestore</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            function bodyLoad()
+            {
+                var lstCategories=document.getElementById("lstCategories");
+                var products=[];
+                var container=document.getElementById("container");
+
+                fetch("https://fakestoreapi.com/products/categories")
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(data){
+                    var categories=data;
+                    categories.unshift("all");
+                    for(var item of categories){
+                        var opt=document.createElement("option");
+                        opt.text=item.toUpperCase();
+                        opt.value=item;
+                        lstCategories.appendChild(opt);
+
+                    }
+                });
+                DisplayAllProducts();
+            }
+            function DisplayAllProducts(){
+                fetch("https://fakestoreapi.com/products")
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(data){
+                    products=data;
+                    DisplayCard(products);
+                })
+            }
+            
+            function DisplayCard(collection)
+            {
+                container.innerHTML="";
+
+                for(var item of collection){
+                        //creating a card like apperance
+                        var div= document.createElement("div");
+                        div.className="card m-3";
+                        div.style.width="200px";
+                        div.innerHTML=`
+                           <img src=${item.image} class="card-img-top" height="200"> 
+                           <div class="card-header" style="height:270px">
+                               <h4>${item.title}</h4>
+                            </div>
+                            <div class="card-body">
+                                <p> &#8377; ${item.price}</p>
+                            </div> 
+                            <div class="card-footer d-grid">
+                                <button onclick="AddClick(this.value)" value=${item.id} class="btn btn-danger"><span class="bi bi-cart4"></span>Add To Cart</button>
+                        `;
+                        container.appendChild(div);
+                    }
+            }
+                    
+            function AddClick(val)
+            {
+                alert("Item Added To Cart");
+                var productid=val;
+                //implement
+               
+            }  
+            function CategoryChanged()
+            {
+                var categoryName=document.getElementById("lstCategories").value;
+                if(categoryName=="all"){
+                    DisplayAllProducts();
+                }
+                fetch(`http://fakestoreapi.com/products/category/${categoryName}`)
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(data){
+                    products=data;
+                    DisplayCard(products);
+                })
+            } 
+            
+          
+            
+        </script>
+    </head>
+    <body class="container-fluid" onload="bodyLoad()">
+        <header class="bg-danger text-center text-white p-2">
+            <h2><span class="bi bi-cart4"></span>Shopping Online</h2>
+        </header>
+        <section>
+            <div class="row">
+                <div class="col-3">
+                    <div class="mt-2">
+                        <label class="form-label">Select Category</label>
+                        <div>
+                            <select onchange="CategoryChanged()" class="form-select" id="lstCategories">
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="container" class="mt-2 d-flex flex-row flex-wrap" style="height: 500px; overflow: auto;">
+
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="d-grid mt-2">
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#cart">
+                            <span class="bi bi-cart-fill"></span> [<span id="lblCount"></span>]
+                            Your Cart Item
+                        </button>
+                        <div class="modal fade" id="cart">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3>Your Cart Items</h3>
+                                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Price</th>
+                                                    <th>Preview</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbody">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

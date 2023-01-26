@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ifstatement KFC FORM</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            function orderClick()
+            {
+                document.getElementById("lblName").innerHTML=document.getElementById("txtName").value;
+                document.getElementById("lblMobile").innerHTML=document.getElementById("txtMobile").value;
+
+                var mealName="";
+                var mealCost=0;
+                var adonName="";
+                var adonCost=0;
+
+                //radios
+                var optBurger=document.getElementById("optBurger");
+                var optShawarma=document.getElementById("optShawarma");
+
+                //checkbox
+                var optWings=document.getElementById("optWings");
+                var optBrownie=document.getElementById("optBrownie");
+
+                if(optBurger.checked){
+                    mealCost=120;
+                    mealName=optBurger.value;
+                }
+                if(optShawarma.checked){
+                    mealCost=100;
+                    mealName=optShawarma.value;
+                }
+                if(optWings.checked){
+                    adonCost=150;
+                    adonName +=optWings.value + "<br>";
+                    mealCost=mealCost+adonCost;
+                }
+                if(optBrownie.checked){
+                    adonCost=60;
+                    adonName +=optBrownie.value +"<br>";
+                    mealCost=mealCost+adonCost;
+                }
+                document.getElementById("lblMeal").innerHTML=mealName;
+                document.getElementById("lblAdon").innerHTML=adonName;
+                document.getElementById("lblAmount").innerHTML="&#8377;"+mealCost;
+                
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <header>
+            <img src="../assets/KFCTOP.PNG" width="100%" height="100%">
+        </header>
+        <section>
+            <div class="accordion" id="registerForm">
+                <!--Item1-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header bg-danger d-grid">
+                        <button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#customer">
+                            Customer Info
+                        </button>
+                    </h2>
+                    <div class="collapse accordion-colapse show" id="customer" data-bs-parent="#registerForm">
+                        <div class="accordion-body">
+                            <div class="mt-2">
+                                <label class="form-label">Customer Name</label>
+                                <div>
+                                    <input type="text" id="txtName" class="form-control">
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <label class="form-label">Mobile Number</label>
+                                <div>
+                                    <input type="text" id="txtMobile" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Item2-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header bg-danger d-grid">
+                        <button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#meal">
+                            Select Meal
+                        </button>
+                    </h2>
+                    <div class="collapse accordion-colllapse" id="meal" data-bs-parent="#registerForm">
+                        <div class="accordion-body">
+                            <div class="row mt-2">
+                                <div class="col text-center">
+                                    <div class="card">
+                                        <img src="../assets/Burger.jpg" height="200" class="card-img-top">
+                                        <div class="card-header">
+                                            <h3>Burger</h3>
+                                        </div>
+                                        <div class="card-footer">
+                                            <input type="radio" name="meal" value="OMG Burger" id="optBurger" class="form-check-input">OMG Burger &#8377;120/-
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col text-center">
+                                    <div class="card">
+                                        <img src="../assets/shawarma.jpg" height="200" class="card-img-top">
+                                        <div class="card-header">
+                                            <h3>Shawarma</h3>
+                                        </div>
+                                        <div class="card-footer">
+                                            <input type="radio" name="meal" value="OMG Shawarma" id="optShawarma" class="form-check-input">OMG Shawarma &#8377;100/-
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Item3-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header bg-danger d-grid">
+                        <button class="btn btn-danger" data-bs-toggle="collapse" data-bs-target="#adon">
+                            Select AD-ONs
+                        </button>
+                    </h2>
+                    <div class="collapse accordion-collapse" id="adon" data-bs-parent="#registerForm">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <div class="card">
+                                        <img src="../assets/wings.webp" height="200" class="card-img-top">
+                                        <div class="card-header">
+                                            <h3>Hot Wings</h3>
+                                        </div>
+                                        <div class="card-footer">
+                                            <input type="checkbox" name="adon" value="Hot Wings" id="optWings" class="form-check-input">Hot Wings &#8377; 150/-
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col text-center">
+                                    <div class="card">
+                                        <img src="../assets/choco-brownie.png" height="200" class="card-img-top">
+                                        <div class="card-header">
+                                            <h3>Choco-Brownie</h3>
+                                        </div>
+                                        <div class="card-footer">
+                                            <input type="checkbox" name="adon" value="Choco Brownie" id="optBrownie" class="form-check-input">Choco-Brownie &#8377; 60/-
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-grid">
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#summary" onclick="orderClick()">Place Order</button>
+                                <div class="modal fade" id="summary">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                                <h3>Bill Summary</h3>
+                                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <dl>
+                                                    <dt>Customer Name</dt>
+                                                    <dd id="lblName"></dd>
+                                                    <dt>Mobile</dt>
+                                                    <dd id="lblMobile"></dd>
+                                                    <dt>Meal</dt>
+                                                    <dd id="lblMeal"></dd>
+                                                    <dt>AD-ONs</dt>
+                                                    <dd id="lblAdon"></dd>
+                                                    <dt>Total Amount</dt>
+                                                    <dd id="lblAmount"></dd>
+                                                </dl>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button data-bs-dismiss="modal" class="btn btn-primary">OK</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>

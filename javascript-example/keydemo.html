@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Key Events</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            var data=[
+                {UserName:"john"},
+                {UserName:"john12"},
+                {UserName:"john_nit"},
+                {UserName:"david"}
+            ]
+            function VerifyUser()
+            {
+                var username=document.getElementById("UserName").value;
+                var usererror=document.getElementById("UserError");
+                if(username.length>3)
+                {
+                        for(var user of data)
+                    {
+                        if(user.UserName==username){
+                            usererror.innerHTML="UserName Taken-Try Another";
+                            usererror.className="text-danger";
+                            break;
+                        }else{
+                            usererror.innerHTML="User Name Available";
+                            usererror.className="text-success";
+                        }
+                    }
+                }else{
+                    usererror.innerHTML="Name Too Short";
+                    usererror.className="text-danger";
+                }
+            }
+            function VerifyCaps(e)
+            {
+                if(e.keyCode>=65 && e.keyCode<=90)
+                {
+                    document.getElementById("PasswordError").style.display="block";
+                }else{
+                    document.getElementById("PasswordError").style.display="none";
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid d-flex justify-content-center align-item-center w-50">
+        <div class="container">
+            <h2>Register User</h2>
+            <div class="mt-3">
+                <label class="form-label">User Name</label>
+                <div>
+                    <input onkeyup="VerifyUser()" type="text" id="UserName" class="form-control">
+                    <div id="UserError">
+
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <label class="form-label">Password</label>
+                <div>
+                    <input onkeypress="VerifyCaps(event)" type="password" id="Password" class="form-control">
+                    <div id="PasswordError" class="text-warning" style="display: none;">
+                        <span class="bi bi-exclamation-diamond"></span>Warning:CAPS ON
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

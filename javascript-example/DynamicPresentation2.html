@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Show Image in Table Dynamically</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            var images=["../aasets/shoe.jpg","../assets/speaker.jpg","../assets/shirts.jpg"];
+            function bodyload()
+            {
+                var tbody=document.getElementById("tbody");
+                for(var path of images)
+                {
+                    var tr=document.createElement("tr");
+                    var td=document.createElement("td");
+                    var pic=document.createElement("img");
+
+                    pic.src=path;
+                    pic.height="100";
+                    pic.width="100";
+                    td.appendChild(pic);
+                    tr.appendChild(td);
+                    tbody.appendChild(tr);
+                }
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <table width="500" border="1">
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jump Statements</title>
+        <script>
+            var users=[
+                {UserName:"Ranjit",Password:"Ranj@1"},
+                {UserName:"raju",Password:"Raj#!"},
+                {UserName:"Litu700",Password:"Sunil$!"}
+            ];
+            function LoginClick()
+            {
+                var username=document.getElementById("txtName").value;
+                var password=document.getElementById("txtPwd").value;
+                var msg=document.getElementById("msg");
+
+                for(var user of users)
+                {
+                    if(user.UserName==username && user.Password==password)
+                    {
+                        document.write("Login Successfully..");
+                    }else
+                        {
+                            msg.innerHTML="Invalid Credentials..";
+                        }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset>
+            <legend>User LogIn</legend>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" id="txtName"></dd>
+                <dt>Password</dt>
+                <dd><input type="password" id="txtPwd"></dd>
+            </dl>
+            <button onclick="LoginClick()">Login</button>
+        </fieldset>
+        <br>
+        <h1 align="center" id="msg"></h1>
+    </body>
+</html>
