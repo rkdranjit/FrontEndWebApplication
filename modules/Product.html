@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product</title>
+        <script type="module">
+            import {Product} from './product.js';
+            
+            var obj=new Product;
+
+            obj.username=prompt("Enter User Name");
+            obj.password=prompt("Enter Password");
+            obj.ProductName=prompt("Enter Product Name");
+
+            if(obj.ProductName){
+                document.querySelector("p").innerHTML="Name"+obj.ProductName;
+            }else{
+                document.querySelector("p").innerHTML=obj.statusMessage;
+            }
+        </script>
+    </head>
+    <body>
+        <p></p>
+    </body>
+</html>
