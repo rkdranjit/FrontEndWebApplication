@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MODALS</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    </head>
+    <body class="container-fluid">
+        <div class="mt-3">
+            <button class="btn btn-primary" data-bs-target="#register" data-bs-toggle="modal">Register</button>
+            <button class="btn btn-warning" data-bs-target="#login" data-bs-toggle="modal">LogIn</button>
+            <div class="modal fade " id="login">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>SignIn</h2>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <dl>
+                                <dt>User Name</dt>
+                                <dd><input type="text" class="form-control"></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="register">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Register User</h2>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <dl>
+                                <dt>User Name</dt>
+                                <dd><input type="text" class="form-control"></dd>
+                                <dt>Password</dt>
+                                <dd><input type="password" class="form-control"></dd>
+                            </dl>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Register</button>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>

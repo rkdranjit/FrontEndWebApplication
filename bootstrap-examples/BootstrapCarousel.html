@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carousel</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    </head>
+    <body class="container-fluid">
+        <div class="carousel slide carousel-fade carousel-dark" id="topBanner" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="../assets/slide1.PNG" class="d-block w-100">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../assets/slide2.PNG" class="d-block w-100">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../assets/slide3.PNG" class="d-block w-100">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../assets/slide4.PNG" class="d-block w-100">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../assets/slide5.PNG" class="d-block w-100">
+                </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-target="#topBanner" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#topBanner" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button data-bs-target="#topBanner" data-bs-slide-to="0" class="active"></button>
+                <button data-bs-target="#topBanner" data-bs-slide-to="1" ></button>
+                <button data-bs-target="#topBanner" data-bs-slide-to="2" ></button>
+                <button data-bs-target="#topBanner" data-bs-slide-to="3" ></button>
+                <button data-bs-target="#topBanner" data-bs-slide-to="4" ></button>
+            </div>
+        </div>
+
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>
