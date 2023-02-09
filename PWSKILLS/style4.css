@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+   
+}
+header{
+background-color:black;
+padding-top: 0.5px;
+padding-bottom: 0.5px;
+height: 9vh;
+margin-top: 5px;
+ margin-left: 5px;
+
+border-top-left-radius: 35px;
+border-top-right-radius:35px ;
+width: 99vw;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    margin-top:10px;
+
+}
+.logo img{
+    height: 25px;
+    margin-left: 45px;
+    margin-right: 35px;
+}
+.vertical{
+    height: 5vh;
+    border-left: 1px solid white;
+    margin-right: 40px;
+}
+.listitems{
+    display: flex;
+    color: white;
+    list-style: none;
+    gap: 70px;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 12px;
+}
+.btn{
+    margin-left: 520px;
+    
+}
+.btnSmall{
+    padding: 5px 13px;
+    border-radius: 5px; 
+    background-color: rgba(192, 10, 162, 0.897);
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+ main{
+    min-height: 90vh;
+    width: 99vw;
+    background-image: url(../assets/PWSKILL/bg.png);
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius:35px ;
+    margin-left: 5PX;
+ }
+ .main{
+    margin-top: 68px;
+ }
+.main h1{
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 60px;
+    text-align: center;
+    justify-content: center;
+
+ }
+ .main p{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+  justify-content: center;
+ }
+ .btnlarge{
+    color: white;
+    background-color: rgba(192, 10, 162, 0.897);
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 7px;
+    margin-top: 50px;
+    font-weight: 800;
+ }
