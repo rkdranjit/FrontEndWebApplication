@@ -7,7 +7,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    background-image: linear-gradient(rgba(41, 38, 38, 0.5),rgba(0,0,0,0.5)),
     url("../assets/PWSKILL/pexels-maxyne-barcel-10402282_1.png");
     background-size: cover;
     background-attachment: fixed;
