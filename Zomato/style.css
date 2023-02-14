@@ -1,0 +1,475 @@
+body{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+header{
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+      position: relative;
+      object-fit: cover;
+      margin-bottom: 2rem;
+}
+.header-image{
+    width: 100%;
+    position: absolute;
+    top: -20vh;
+    z-index: -1; 
+}
+.header-image img{
+    width: 100%;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0 40px;
+    color: white;
+    font-size: 18px;
+    list-style: none;   
+}
+.nav p{
+    font-size: 13px;
+    margin-left: 75px;
+    font-weight: bolder;
+    padding: 5px;
+    
+}
+.nav-bar{
+    list-style: none;
+    font-weight: lighter;
+    display: flex;
+    gap: 3rem;
+    font-size: 18px;
+    padding-top: 20px;
+}
+.nav-bar li{
+    list-style: none;
+}
+a:link{
+    text-decoration: none;
+}
+.nav-bar li a{
+    color:inherit;
+     
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 7vh;
+    align-items: center;
+    
+}
+.logo{
+    width:20vw;
+    padding-bottom: 20px;
+}
+.head h3{
+    font-size: 2rem;
+    color: whitesmoke;
+    font-weight: 400;
+    padding: 20px;
+    font-size: 35px;
+}
+.search{
+    display: flex;
+    width: 55vw;
+    align-items: center;
+    border-radius: 10px;
+    background: white;
+    padding: 5px 4px;
+}
+.search .search-item{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.search .search-item p{
+    color: grey;
+    border-right: 1px solid gray;
+    font-size: 15px;
+    /* margin-right: 10px; */
+    margin: 10px;
+    
+}
+.search-item  .bi-caret-down-fill{
+    color:gray;
+    
+}
+.search .search-item input{
+    outline: none;
+    border: none;
+    width: 200%;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.search .search-item:first-child{
+    width: 30%;
+    color: palevioletred;
+}
+.search .search-item:last-child{
+    width: 70%;
+    color: gray;
+}
+
+/* Section-1 */
+.section-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.section-1 .section-1-item{
+    position: relative;
+    width: 20rem;
+    margin: 3px 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    border: 1px solid rgb(236, 236,236);
+}
+.section-1 .section-1-item img{
+    width: 100%;
+    border: 1px solid rgb(236, 236,236);
+    border-radius: 10px;
+    /* z-index: -1; */
+}
+.section-1 .section-1-item .items-details{
+    position: absolute;
+    bottom: 0px;
+    align-items:baseline;
+    border: 0 0 10px 10px;
+    background: white;
+    width: 100%;
+    height: 40%;
+    /* z-index:2; */
+}
+.section-1 .section-1-item .items-details h1{
+    padding-top: 5px;
+    font-size: 20px;
+}
+.section-1 .section-1-item .items-details p{
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 17px;
+    text-align:justify;
+    font-family: bold, sans-serif;
+}
+.section-1-item:hover{
+    transition: transform 0.7s;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* section 2 */
+.collections{
+    margin-left: 120px;
+}
+.nav1{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 110px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    
+}
+ .collect{
+    color:rgb(209, 82, 82);
+    font-weight: lighter;
+ }
+.section-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    margin-left: 0.7em;
+}
+.section-2-item{
+    
+  max-width: 280px;
+  height: 320px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2 ); 
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  
+}
+.section-2 .section-2-item img{
+    margin-left: 0.7em;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(0,0,0,10);  
+}
+ .item-details-2 {
+   padding: 0 10px;
+   margin-left: 5px;
+   position: absolute;
+   z-index: 2;
+   bottom: 0;
+   color: white;
+   width: 100%;
+   text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    
+}
+.item-details-2 p{
+    margin: 0;
+    font-size: 19px;
+}
+
+/* Section 3 */
+.section-3{
+    width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    color: rgb(71, 65, 65);
+}
+.section-3 h1{
+    font-size: 40px;
+    font-weight: 300;
+}
+.section-3 h3{
+    font-weight:bolder;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.section-3 p{
+    font-size: 18px;
+}
+.bi-chevron-right{
+    margin-top: 5px;
+    font-size: 18px;
+}
+.localities_list{
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+    min-width: 320px;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 20px 15px;
+    height: 80px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.localities_card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.localities_container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Section 4*/
+.section-4{
+    display: flex;
+    margin: auto;
+    width: 750px;
+    align-items: center;
+    
+}
+.zomato-app-image{
+    width: 300px;
+}
+.zomato-app-image img{
+    width: 100%;
+    height: 300px;
+    
+}
+.zomato-app-details h1{
+    font-size: 42px;
+    margin-top: 0px;
+    margin-left: 15px;
+}
+.zomato-app-details p{
+    font-size: 18px;
+    margin-left: 15px;
+    margin-top: 15px;
+
+}
+.app-radio-btn{
+    margin: 5px 0px;
+    font-size: 18px;
+    padding-top: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.app-input{
+    display: flex;
+    height: 45px;
+    margin: 20px 0px;
+    margin-left: 15px;
+}
+.app-input-container{
+    height: 100%;
+}
+.app-input-container select,.app-input-container input{
+    height: 100%;
+}
+.app-input-container input{
+    width: 280px;
+    max-width: 300px;
+    margin-right: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+}
+.zomato-app-btn{
+    color: white;
+    background-color: rgb(239,79,95);
+    width: 150px;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.zomato-app-p p{
+    font-weight: lighter;
+    font-size: 15px;
+}
+.download-app{
+    display: flex;
+    margin-left: 15px;
+}
+.download-app img{
+    width: 100%;
+    max-width: 120px;
+    margin-right:20px;
+    
+    
+}
+/*  section 5 */
+.section-5{
+    margin-bottom: 90px;
+}
+.section-5 h1{
+    font-size: 30px;
+    margin-top: 170px;
+    margin-bottom: 30px;
+    color: rgb(37, 37, 37);
+}
+.section-5-collapse-heading{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+       
+}
+.section-5-collapse-heading h3{
+    font-size: 21px;
+    font-weight: 50px;
+}
+.section-5-collapse{
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    padding:15px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+
+}
+/* .dot{
+    padding: 5px;
+    height: 5px;
+    width: 5px;
+} */
+.popularcuisinesName{
+    
+    color: rgb(112,110,110);
+}
+#popularcuisinesId{
+    display: none;
+}
+.restaurantName{
+    color: rgb(112,110,110);
+}
+#restaurantDisplayDataId,#toprestaurantDisplayId,#deliveryCityDisplayId{
+    display: none;
+}
+
+
+
+/* footer */
+.flagImage{
+    width: 20px;
+    height: 15px;
+}
+.flagImage img{
+    width: 100%;
+    height: 100%;
+}
+.footerOptionSection{
+    display: flex;
+    border: 1px solid #cccccc;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.footerOptionSection:first-child{
+    margin-right: 30px;
+}
+.footerOptionSection select{
+    border: none;
+    width: 90px;
+    cursor: pointer;
+}
+.footerlanguagecountry{
+    display: flex;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-logo{
+    width: 130px;
+}
+.footer-logo img{
+    width: 100%;
+}
+.footer-menu{
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.downloadApp{
+     width: 130px;
+     display: block;
+     margin-top: 17px;
+     margin-bottom: 10px;
+}
+.downloadApp img{
+    width: 100%;
+}
+.footer-menu ul{
+    padding: 0;
+    list-style: none;
+}
+.footer-menu h5{
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+.footer-menu a{
+    color:rgb(151, 145, 145) ;
+    text-decoration: none;
+    line-height: 1.5;
+
+}
+.socialmedialinks{
+    margin-bottom: 10px;
+    font-size: 21px;
+
+}
+.terms{
+    font-size:small;
+    color: #726e6e;
+}
