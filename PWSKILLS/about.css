@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+body{
+    max-width: 1440px;
+    background-color: #f0f4f5;
+    overflow: hidden;
+    margin: auto;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15vh;
+    padding: 0 5%;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    margin-right: 50px;
+    font-weight: 600;
+}
+nav ul li:first-child{
+    color: #20bc7e;
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+nav img{
+    height: 50px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    height: 85vh;
+}
+.hospitalDescription{
+    width: 48%;
+    text-align: center;
+}
+.hospitalDescription h1{
+    margin-bottom: 20px;
+    color: #20BC7E;
+}
+.hospitalDescription p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.achievement{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+.achievementCard{
+    width:130px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+}
+
