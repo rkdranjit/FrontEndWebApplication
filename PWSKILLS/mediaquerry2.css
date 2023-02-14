@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #111827;
+    color:white;
+}
+img:hover{
+    cursor: pointer;
+}
+nav{
+    margin-top: 5px;
+    margin-right: 10px;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+}
+nav ul li{
+    list-style-type: none;
+    font-size: 10px;
+}
+.firstimg img{
+    width: 20px;
+    display: none;
+}
+.home{
+    padding: 5px 10px;
+    background: rgb(100, 100, 224);
+    border-radius: 15px;
+}
+.mainSection{
+    max-width: 100vw;
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.leftline-1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+}
+.leftline-1 img{
+    height: 15px;
+}
+.leftline-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.leftline-2 h1{
+    font-size: 15px;
+}
+.leftline-2 h2{
+    font-size:10px ;
+    color: rgb(197,197 ,89);
+}
+.rightSection img{
+   height: 100px;
+   width: 10vw;
+}
+.projects{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.projects div h1{
+    font-size: 18px;
+}
+.horizontal-divider{
+    height: 7px;
+    width: 68px;
+    background-color: blue;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.project-list{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0.5px;
+    column-gap: 7px;
+}
+.project-image{
+  height: 80px;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.project p{
+    font-size: 10px;
+}
+.contact
+{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.contact div h1{
+    font-size: 15px;
+}
+.horizontal-divider-contact{
+    height: 8px;
+    width: 75px;
+    background-color: blue;
+    border-radius: 10px;
+   
+}
+.socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 1px;
+}
+.socials img{
+    height: 15px;
+}
+@media screen and (min-width:0px) and (max-width:500px){
+    nav ul{
+        display: none;
+    }
+    .firstimg img{
+        display: block;
+        height: 15px;
+        margin-left: 5px;
+    }
+    .mainSection{
+        display: grid;
+    }
+    .rightSection img{
+        width: 25vw;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+      
+    }
+    .leftline-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size:7px;
+    }
+    .leftline-1 img{
+        height: 10px;
+    }
+    .leftline-2 h1{
+        font-size: 15px;
+        justify-content: center;
+        text-align: center;
+    }
+    .leftline-2 h2{
+        font-size:9px ;
+        text-align: center;
+        margin-top: 1px;
+       
+    }
+    .project-list{
+        display: grid;
+        grid-template-columns: 0.5fr;
+        align-items: center;
+        justify-content: center;
+        row-gap: 0.5px;
+        column-gap: 5px;
+        margin-top: 1px;
+     
+    }
+    .project-image{
+        height: 40px;
+      }
+    .project p{
+        font-size: 5px;
+    }
+    .projects div h1{
+        font-size: 10px;
+    }
+    .horizontal-divider{
+        height: 5px;
+        width:35px;
+        background-color: blue;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+    .contact div h1{
+        font-size: 10px;
+    }
+    .horizontal-divider-contact{
+        height: 5px;
+        width: 53px;
+        margin-bottom: 1px;
+        background-color: blue;
+        border-radius: 10px;
+    }
+   
+    .socials img{
+        height: 10px;
+    }
+
+}
+
