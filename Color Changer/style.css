@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 25px;
+    background-color: #5a5555;
+    color: #ffffff;
+    cursor: pointer;
+}
